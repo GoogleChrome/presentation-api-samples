@@ -193,7 +193,7 @@ if (!navigator.presentation.receiver) {
       this.onconnectionavailable = null;
 
     };
-      // Must assign new PresentationReciver object to the
+      // Must assign new PresentationReceiver object to the
       // navigation.presentation's receiver using the object constructor because
       // both navigation.presentation and navigation.presentation.receiver are
       // readonly attributes.

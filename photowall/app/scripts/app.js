@@ -119,7 +119,7 @@
         // paper-dialog and not from one of its children.
         if (e.target == dialog) {
           dialog.querySelector('[autofocus]').focus();
-          if(app.$.main){
+          if (app.$.main) {
             app.$.main.setAttribute('aria-hidden', true);
             app.$.main.querySelectorAll(photowall.TABINDEX_SELECTOR)
                 .forEach(function(el) {
