@@ -77,7 +77,7 @@ Example:
        * @function
        */
       ready: function() {
-        var that = this;
+        const that = this;
         // Starts a new PresentationRequest to the specified presentation URL.
         this._set_presentationRequest(new PresentationRequest(this.url));
         // Monitors for the availability of presentation displays and updates
@@ -96,8 +96,9 @@ Example:
        * @function
        */
       join: function() {
-        var that = this;
-        if (this.isConnected) {
+        const that = this;
+
+        if (this.isConnected) {;
           // Already connected, abort remaining steps.
           return;
         }
@@ -106,7 +107,7 @@ Example:
           // Updates the _presentationConnection property.
           that._set_presentationConnection(presentationConnection);
           // Update the state of the presentation connection and fire events.
-          if (presentationConnection.state == 'connected') {
+          if (presentationConnection.state == 'connected' || presentationConnection.state =='connecting') {
             that._setIsConnected(true);
             that.fire('connect');
           }
@@ -128,8 +129,10 @@ Example:
           presentationConnection.onmessage = function(e) {
             // Fire an event with the contents of the message.
             that.fire('message', e.data)
+
           };
         });
+
       },
 
       /**
