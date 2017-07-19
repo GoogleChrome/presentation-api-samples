@@ -1,13 +1,14 @@
 /**
- * @fileoverview Polyfill for Presentation API for Cast Streaming Receiver.
+ * @fileoverview Polyfill for Presentation API for Cast for EDU
  * @author jonlau@google.com (Jonathan Lau)
+ * @author budnampet@google.com (Pet Ramanudom)
  */
 
 /* If the receiver page is launched in the app in 1-UA mode, then there is no
  * need to redefine the following Presentation API functions. The polyfill
  * should effectively be skipped.
  */
-if(!navigator.presentation.receiver){
+if (!navigator.presentation.receiver) {
   (() => {
 
     'use strict';
@@ -167,7 +168,6 @@ if(!navigator.presentation.receiver){
           }
         });
       });
-
     };
 
     /**
@@ -193,9 +193,10 @@ if(!navigator.presentation.receiver){
       this.onconnectionavailable = null;
 
     };
-      // Must assign new PresentationReciver object to the navigation.presentation's
-      // receiver using the object constructor because both navigation.presentation and
-      // navigation.presentation.receiver are readonly attributes.
+      // Must assign new PresentationReciver object to the
+      // navigation.presentation's receiver using the object constructor because
+      // both navigation.presentation and navigation.presentation.receiver are
+      // readonly attributes.
       Object.defineProperty(navigator,'presentation',
         {
           value: {receiver: new PresentationReceiver()},

@@ -97,7 +97,6 @@ Example:
        */
       join: function() {
         const that = this;
-
         if (this.isConnected) {;
           // Already connected, abort remaining steps.
           return;
@@ -129,10 +128,8 @@ Example:
           presentationConnection.onmessage = function(e) {
             // Fire an event with the contents of the message.
             that.fire('message', e.data)
-
           };
         });
-
       },
 
       /**
