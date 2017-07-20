@@ -43,5 +43,4 @@ the [Google Cast for Education](https://chrome.google.com/webstore/detail/google
 app to Chrome and launch it. For more help on setting up Google Cast for
 Education, check out the [support page](https://support.google.com/edu/castforedu).
 
-Presentation API is [enabled by default]
-(https://www.chromestatus.com/feature/6676265876586496) on Chrome 51+.
+Presentation API is [enabled by default](https://www.chromestatus.com/feature/6676265876586496) on Chrome 51+.

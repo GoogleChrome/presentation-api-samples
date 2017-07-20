@@ -90,7 +90,7 @@ if (!navigator.presentation.receiver) {
      * https://w3c.github.io/presentation-api/#closing-a-presentationconnection
      */
     PresentationConnection.prototype.close = function() {
-      // TODO(b/30486674): Send a message to close the connection.
+      // TODO: Send a message to close the connection.
       if (this.state != 'close') {
         this.state = 'closed';
         if (this.onclose) {
